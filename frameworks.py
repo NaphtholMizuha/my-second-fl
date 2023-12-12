@@ -32,7 +32,7 @@ class FedServer:
 
     def log_test(self, round):
         loss, acc = self.test()
-        logger.warning(f"Server Round {round} (UUID: {self.uuid})\nloss={loss:.3f}, acc={acc * 100:.2f}%")
+        logger.warning(f"Server Round {round}: loss={loss:.3f}, acc={acc * 100:.2f}%")
 
     def test(self):
         self.model.eval()
